@@ -10,13 +10,13 @@ public class Main {
         String secondNameFirstAuthor = "Пушкин";
         String firstNameSecondAuthor = "Иван";
         String secondNameSecondAuthor = "Тургенев";
-        Book capitanDochka = new Book(firstBook, firstAuthor, yearFirstBook);
         Author pushkinAleksandr = new Author(firstNameFirstAuthor, secondNameFirstAuthor);
-        Book fathersAndChildren = new Book(secondBook, secondAuthor, yearSecondBook);
+        System.out.println(pushkinAleksandr.getFirstNameAuthor() + " " + pushkinAleksandr.getSecondNameAuthor());
         Author turgenevIvan = new Author(firstNameSecondAuthor, secondNameSecondAuthor);
-        System.out.println(capitanDochka.getAuthorBook());
-        System.out.println(pushkinAleksandr.getSecondNameAuthor());
-        System.out.println(fathersAndChildren.getTitleBook());
-        System.out.println(turgenevIvan.getFirstNameAuthor());
+        System.out.println(turgenevIvan.getFirstNameAuthor() + " " + turgenevIvan.getSecondNameAuthor());
+        Book capitanDochka = new Book(firstBook, firstAuthor, yearFirstBook);
+        System.out.println(capitanDochka.getTitleBook() + ", " + capitanDochka.getAuthorBook() + ", " + capitanDochka.getYearBook());
+        Book fathersAndChildren = new Book(secondBook, secondAuthor, yearSecondBook);
+        System.out.println(fathersAndChildren.getTitleBook() + ", " + fathersAndChildren.getAuthorBook() + ", " + fathersAndChildren.getYearBook());
     }
 }
