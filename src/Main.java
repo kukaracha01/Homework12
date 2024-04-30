@@ -14,6 +14,9 @@ public class Main {
         Author pushkinAleksandr = new Author(firstNameFirstAuthor, secondNameFirstAuthor);
         Book fathersAndChildren = new Book(secondBook, secondAuthor, yearSecondBook);
         Author turgenevIvan = new Author(firstNameSecondAuthor, secondNameSecondAuthor);
-
+        System.out.println(capitanDochka.getAuthorBook());
+        System.out.println(pushkinAleksandr.getSecondNameAuthor());
+        System.out.println(fathersAndChildren.getTitleBook());
+        System.out.println(turgenevIvan.getFirstNameAuthor());
     }
 }
