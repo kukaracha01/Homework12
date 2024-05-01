@@ -1,19 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        String firstBook = "Капитанская дочка";
-        String secondBook = "Отцы и дети";
-        String firstAuthor = "А.Пушкин";
-        String secondAuthor = "И.Тургенев";
-        int yearFirstBook = 1836;
-        int yearSecondBook = 1860;
-        String firstNameFirstAuthor = "Александр";
-        String secondNameFirstAuthor = "Пушкин";
-        String firstNameSecondAuthor = "Иван";
-        String secondNameSecondAuthor = "Тургенев";
-        Book capitanDochka = new Book(firstBook, firstAuthor, yearFirstBook);
-        Author pushkinAleksandr = new Author(firstNameFirstAuthor, secondNameFirstAuthor);
-        Book fathersAndChildren = new Book(secondBook, secondAuthor, yearSecondBook);
-        Author turgenevIvan = new Author(firstNameSecondAuthor, secondNameSecondAuthor);
+        Author pushkinAleksandr = new Author("Александр Пушкин");
+        Author turgenevIvan = new Author("Иван Тургенев");
 
+        Book capitanDochka = new Book("Капитанская дочка", pushkinAleksandr.getNameAuthor(), 1836);
+        System.out.println(capitanDochka.getTitleBook() + ", " + capitanDochka.getAuthorBook() + ", " + capitanDochka.getYearBook());
+
+        Book fathersAndChildren = new Book("Отцы и дети", turgenevIvan.getNameAuthor(), 1860);
+        System.out.println(fathersAndChildren.getTitleBook() + ", " + fathersAndChildren.getAuthorBook() + ", " + fathersAndChildren.getYearBook());
+
+        fathersAndChildren.setYearBook(1861);
+        System.out.println(fathersAndChildren.getYearBook());
     }
 }
